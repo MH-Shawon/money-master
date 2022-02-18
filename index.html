@@ -11,27 +11,42 @@
    <main>
     <section>
         <header>
-            <h1 class="text-2xl font-bold text-center">Monthly Cost!!!</h1>
+            <h1 class="text-2xl pt-4 font-bold text-center">Monthly Cost!!!</h1>
         </header>
         </section>
-        <section class="pt-4 grid sm:grid-cols-1 gap-4 md:grid-cols-2">
+        <section class="grid sm:grid-cols-1 gap-4 md:grid-cols-2 pt-8 ">
        <div style="height: 90vh;"> 
            <!-- images-section  -->
           <img class="rounded-lg" src="./images/download.jfif" style="height: 100%;" alt="">
         </div>
         <!-- calculation part  -->
-        <div class="bg-red-100 rounded-lg px-48 pt-48">
+        <div class="bg-red-100 rounded-lg  p-24 px-32">
             <h3 class="text-2xl px-16 font-bold">Income</h3>
-            <p class="font-medium flex">Income:<input class="border-2 border-gray-700 bg-white rounded-lg font-bold mx-2" type="text" placeholder="0"></p>
-            <h3 class="text-2xl font-bold text-cente px-16">Expenses</h3>
-            <p class="font-medium flex">Food:<input class="border-2 border-gray-700 bg-white rounded-lg font-bold " type="text" placeholder="0"></p>
-            <p class="font-medium flex">Rent:<input class="border-2 border-gray-700 bg-white rounded-lg font-bold" type="text" placeholder="0"></p>
-            <p class="font-medium flex">Cloths:<input class="border-2 border-gray-700 bg-white rounded-lg font-bold" type="text" placeholder="0"></p> 
-            <button class="bg-blue-700 rounded-lg p-2 font-semibold mt-2 text-center text-white px-10 ">Calculate</button>     
-        </div>
+            <p class="font-medium flex m-2">Income:<input id="income-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold mx-2" type="text" placeholder="0"></p>
+            <h3 class="text-2xl m-2 font-bold text-cente px-16">Expenses</h3>
 
-       </section>
+            <small id="err"></small>
+
+            <p class="font-medium flex m-2 pl-4">Food:<input id="food-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold mx-2" type="text" placeholder="0"></p>
+            <p class="font-medium flex m-2 pl-4">Rent:<input id="rent-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold mx-2" type="text" placeholder="0"></p>
+            <p class="font-medium flex m-2 pl-2">Cloths:<input id="cloths-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold mx-2" type="text" placeholder="0"></p> 
+            <button id="calculator-btn" class="bg-blue-700 rounded-lg p-2 font-semibold mt-2 text-center text-white px-16 mx-8 ">Calculator</button>  
+            <!-- account details   -->
+            <div>
+                <h4 class="text-xl font-semibold flex">Total Expenses: <span id="total-expense">0</span></h4> 
+                <h4 class="text-xl px-16 font-semibold">Balance:<span id="new-balance">0</span></h4>
+            </div>
+            <!-- savings part  -->
+            <div class="flex mt-4">
+                <p class="font-medium flex">Save: <input id="save-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold" type="text" placeholder="0"></p>  <span class="ml-2"> %</span>
+            <button onclick="verifyInput()" id="savings-btn" class="bg-blue-700 rounded-lg  px-6 font-semibold ml-2 text-center text-white ">Save</button> 
+             </div>
+                <h4 class="text-xl px-16 p-2 mx-2 font-semibold flex">Saving Amount: <span id="saving-amount">0</span></h4> 
+                <h4 class="text-xl px-16 font-semibold">Remaining Balance:<span id="remain-balance">0</span></h4>
+            </div>
+        </div>
+        </section>
    </main>
-    <script src="./js/index.js"></script>
+    <script src="./js/calculation.js"></script>
 </body>
 </html>
