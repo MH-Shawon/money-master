@@ -57,18 +57,37 @@ document.getElementById('calculator-btn').addEventListener('click', function(){
      totalSavings.innerText = parseInt(newTotalSavings);
     
     const remain = document.getElementById('remain-balance');
+    const balance = document.getElementById('new-balance')
 
-    const remainingBlnc = incomeInputAmount -  newTotalSavings;
+   const foodCostInput = document.getElementById('food-input');
+    const FoodCostAmount = foodCostInput.value;
+    const rentCostInput = document.getElementById('rent-input');
+    const rentCostAmount = rentCostInput.value;
+    const clothsCostInput = document.getElementById('rent-input');
+    const clothsCostAmount = clothsCostInput.value;
 
-    remain.innerText = remainingBlnc;
-
-})
-    if (saveInnerText === String){
-        saveInnerText = "String is invalid"
-    }
-    else{
-        (saveInnerText === nagetiveNumber)
-        saveInnerText = "invalid Number"
+    const incomeInput = document.getElementById('income-input');
+    const incomeInputAmount = incomeInput.value;
+    
+    
+        const totalExpense = document.getElementById('total-expense')
+        const newTotalExpense = parseFloat(FoodCostAmount)  + parseFloat (rentCostAmount) + parseFloat (clothsCostAmount);
+        totalExpense.innerText = newTotalExpense;
         
-    }
-  console.log ('saveInnerText')
+    const newBalance = balance.value;
+    const remainingBlnc = incomeInputAmount -  (newTotalSavings + newTotalExpense );
+    
+
+    remain.innerText =parseInt(remainingBlnc);
+
+}) 
+
+// error 
+    // if (saveInnerText === String){
+    //     saveInnerText = "String is invalid"
+    // }
+    // else{
+    //     (saveInnerText === nagativeValue)
+    //     saveInnerText = "invalid Number"
+    //     }
+    //     console.log ('saveInnerText');
