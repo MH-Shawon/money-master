@@ -71,4 +71,4 @@ document.getElementById('calculator-btn').addEventListener('click', function(){
         saveInnerText = "invalid Number"
         
     }
- 
+  console.log ('saveInnerText')
