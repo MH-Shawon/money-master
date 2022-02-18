@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment-5></title>
     <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <main>
@@ -39,10 +40,12 @@
             <!-- savings part  -->
             <div class="flex mt-4">
                 <p class="font-medium flex">Save: <input id="save-input" class="border-2 border-gray-700 bg-white rounded-lg font-bold" type="text" placeholder="0"></p>  <span class="ml-2"> %</span>
-            <button onclick="verifyInput()" id="savings-btn" class="bg-blue-700 rounded-lg  px-6 font-semibold ml-2 text-center text-white ">Save</button> 
+            <button id="savings-btn" class="bg-blue-700 rounded-lg  px-6 font-semibold ml-2 text-center text-white ">Save</button> 
              </div>
-                <h4 class="text-xl px-16 p-2 mx-2 font-semibold flex">Saving Amount: <span id="saving-amount">0</span></h4> 
+                <h4 class="text-xl px-16 p-2 mx-2 font-semibold flex">Saving Amount: <span id="saving-amount">0</span></h4>
+                
                 <h4 class="text-xl px-16 font-semibold">Remaining Balance:<span id="remain-balance">0</span></h4>
+               
             </div>
         </div>
         </section>

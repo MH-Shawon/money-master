@@ -11,21 +11,24 @@ document.getElementById('calculator-btn').addEventListener('click', function(){
 
     const incomeInput = document.getElementById('income-input');
     const incomeInputAmount = incomeInput.value;
-
-
     
+    // error handling 
     if(Math.sign(parseInt(FoodCostAmount)) === -1
     || Math.sign(parseInt(rentCostAmount)) === -1 ||
     Math.sign(parseInt(clothsCostAmount)) === -1 ||
     Math.sign(parseInt(incomeInputAmount)) === -1
     ){
     errId.innerText = "Negative value is invalid"
-    } else{
+    }
+     
+     
+    else{
         // total expense 
         const totalExpense = document.getElementById('total-expense')
         const newTotalExpense = parseFloat(FoodCostAmount)  + parseFloat (rentCostAmount) + parseFloat (clothsCostAmount);
         totalExpense.innerText = newTotalExpense;
 
+        
         //  balancing part 
         const balance = document.getElementById('new-balance')
         const newBalance = incomeInputAmount - newTotalExpense;
@@ -60,8 +63,12 @@ document.getElementById('calculator-btn').addEventListener('click', function(){
     remain.innerText = remainingBlnc;
 
 })
- 
-    // error handling 
-    function verifyInput(){
-        console.log (pin)
+    if (saveInnerText === String){
+        saveInnerText = "String is invalid"
     }
+    else{
+        (saveInnerText === nagetiveNumber)
+        saveInnerText = "invalid Number"
+        
+    }
+ 
